@@ -3,7 +3,7 @@
     "displayName": "vscode-snowball-syntax",
     "description": "Syntax highlighting for Snowball.",
     "version": "0.0.1",
-    "publisher": "dunstontc",
+    "publisher": "MauroBalades",
     "repository": {
         "type": "git",
         "url": "https://github.com/snowball/vscode-syntax.git"
