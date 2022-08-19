@@ -226,10 +226,6 @@
                     "name": "entity.name.function.snowball"
                 },
                 {
-                    "match": "(?!Err|Ok|Some)([a-zA-Z]+)(?=[(])",
-                    "name": "entity.name.function.snowball"
-                },
-                {
                     "match": "([a-zA-Z][a-zA-Z0-9_]+)(\\<)(T)(\\>)(?=[(])",
                     "name": "entity.name.function.snowball",
                     "captures": {
@@ -435,15 +431,11 @@
                 },
                 {
                     "name": "storage.type.snowball",
-                    "match": "\\b(let)\\b"
+                    "match": "\\b(var)\\b"
                 },
                 {
                     "name": "storage.type.snowball",
-                    "match": "(impl)(?=<)"
-                },
-                {
-                    "name": "storage.type.snowball",
-                    "match": "\\b(enum|impl|struct|trait|union)\\b"
+                    "match": "\\b(enum|struct|class)\\b"
                 },
                 {
                     "name": "entity.name.lifetime.snowball",
@@ -453,30 +445,7 @@
         },
         "support": {
             "patterns": [
-                {
-                    "name": "support.function.builtin.snowball",
-                    "match": "\\b(macro_rules|compile_error|format_args|env|option_env|concat_idents|concat|line|column|file|stringify|include|include_str|include_bytes|module_path|cfg)!"
-                },
-                {
-                    "name": "support.function.core.snowball",
-                    "match": "\\b(panic|assert|assert_eq|assert_ne|debug_assert|debug_assert_eq|debug_assert_ne|try|write|writeln|unreachable|unimplemented)!"
-                },
-                {
-                    "name": "support.function.std.snowball",
-                    "match": "\\b(format|print|println|eprint|eprintln|select|vec)!"
-                },
-                {
-                    "name": "support.function.log.snowball",
-                    "match": "\\b(log|error|warn|info|debug|trace|log_enabled)!"
-                },
-                {
-                    "name": "support.constant.core.snowball",
-                    "match": "\\b(None|Ok|Err)\\b"
-                },
-                {
-                    "name": "support.constant.core.snowball",
-                    "match": "\\b(Some)"
-                }
+
             ]
         },
         "constant": {
@@ -529,16 +498,12 @@
                     "match": "\\b(self)\\b"
                 },
                 {
-                    "name": "keyword.other.unsafe.snowball",
-                    "match": "\\b(unsafe)\\b"
-                },
-                {
                     "name": "keyword.control.snowball",
                     "match": "\\b(break|continue|else|if|in|for|loop|match|return|while)\\b"
                 },
                 {
                     "name": "keyword.other.snowball",
-                    "match": "\\b(ref|use|super|move)\\b"
+                    "match": "\\b(import)\\b"
                 },
                 {
                     "name": "keyword.other.where.snowball",
@@ -547,11 +512,6 @@
                 {
                     "name": "keyword.other.as.snowball",
                     "match": "(\\b(as)\\b)"
-                },
-                {
-                    "comment": "Reserved keyword",
-                    "name": "invalid.deprecated.snowball",
-                    "match": "\\b(abstract|alignof|become|do|final|macro|offsetof|override|priv|proc|pure|sizeof|typeof|virtual|yield)\\b"
                 }
             ]
         },

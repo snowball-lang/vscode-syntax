@@ -16,7 +16,7 @@
         // },
         {
           "name": "keyword.other.snowball",
-          "match": "\\b(ref|use|super|move)\\b"
+          "match": "\\b(import)\\b"
         },
         {
           "name": "keyword.other.where.snowball",
