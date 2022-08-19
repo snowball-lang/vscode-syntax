@@ -17,7 +17,7 @@
             {
                 "id": "snowball",
                 "aliases": ["snowball"],
-                "extensions": [".rs"],
+                "extensions": [".sn", ".test.sn"],
                 "configuration": "./language-configuration.json"
             }
         ],
@@ -30,7 +30,7 @@
         ]
     },
     "galleryBanner": {
-        "color": "#1e1e1e",
+        "color": "#000",
         "theme": "dark"
     },
     "icon": "assets/snowball.png",
