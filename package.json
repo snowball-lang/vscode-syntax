@@ -12,6 +12,7 @@
     "scripts": {"start": "gulp watch"},
     "engines": {"vscode": "^1.20.0"},
     "categories": ["Programming Languages"],
+    "v1": true,
     "contributes": {
         "languages": [
             {
