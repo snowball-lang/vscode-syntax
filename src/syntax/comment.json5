@@ -3,7 +3,7 @@
     "comment": {
       "patterns": [
         {
-          "name": "comment.block.documentation.rust",
+          "name": "comment.block.documentation.snowball",
           "begin": "/\\*[\\*!](?![\\*/])",
           "end": "\\*/",
           "patterns": [
@@ -59,12 +59,12 @@
           ]
         },
         {
-          "name": "comment.block.rust",
+          "name": "comment.block.snowball",
           "begin": "/\\*",
           "end": "\\*/",
         },
         {
-          "name": "comment.line.documentation.rust",
+          "name": "comment.line.documentation.snowball",
           "begin": "//[!/](?=[^/])",
           "end": "$",
           "patterns": [
@@ -120,7 +120,7 @@
           ]
         },
         {
-          "name": "comment.line.double-slash.rust",
+          "name": "comment.line.double-slash.snowball",
           "begin": "//",
           "end": "$"
         },

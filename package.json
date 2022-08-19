@@ -1,31 +1,31 @@
 {
-    "name": "vscode-rust-syntax",
-    "displayName": "vscode-rust-syntax",
+    "name": "vscode-snowball-syntax",
+    "displayName": "vscode-snowball-syntax",
     "description": "Syntax highlighting for Rust.",
     "version": "0.0.32",
     "publisher": "dunstontc",
     "repository": {
         "type": "git",
-        "url": "https://github.com/dunstontc/vscode-rust-syntax.git"
+        "url": "https://github.com/dunstontc/vscode-snowball-syntax.git"
     },
-    "bugs": {"url": "https://github.com/dunstontc/vscode-rust-syntax/issues"},
+    "bugs": {"url": "https://github.com/dunstontc/vscode-snowball-syntax/issues"},
     "scripts": {"start": "gulp watch"},
     "engines": {"vscode": "^1.20.0"},
     "categories": ["Programming Languages"],
     "contributes": {
         "languages": [
             {
-                "id": "rust",
-                "aliases": ["rust"],
+                "id": "snowball",
+                "aliases": ["snowball"],
                 "extensions": [".rs"],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "rust",
-                "scopeName": "source.rust",
-                "path": "./syntaxes/rust.tmLanguage.json"
+                "language": "snowball",
+                "scopeName": "source.snowball",
+                "path": "./syntaxes/snowball.tmLanguage.json"
             }
         ]
     },
@@ -33,7 +33,7 @@
         "color": "#1e1e1e",
         "theme": "dark"
     },
-    "icon": "assets/rust.png",
+    "icon": "assets/snowball.png",
     "devDependencies": {
         "gulp": "^3.9.1",
         "gulp-json5-to-json": "^0.2.1",

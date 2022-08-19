@@ -3,16 +3,16 @@
     "meta": {
       "patterns": [
         {
-          "name": "meta.attribute.rust",
+          "name": "meta.attribute.snowball",
           "begin": "#\\!?\\[",
             "end": "\\]",
           },
           {
-            "name": "meta.statement.if-let.rust",
+            "name": "meta.statement.if-let.snowball",
             "match": "(if) (let)",
             "captures": {
-              "1": {"name": "keyword.control.rust"},
-              "2": {"name": "storage.type.rust"},
+              "1": {"name": "keyword.control.snowball"},
+              "2": {"name": "storage.type.snowball"},
             },
           },
       ]

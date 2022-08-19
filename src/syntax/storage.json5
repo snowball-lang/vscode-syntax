@@ -3,65 +3,65 @@
     "storage": {
       "patterns": [
         {
-          "name": "storage.modifier.external.rust",
+          "name": "storage.modifier.external.snowball",
           "match": "\\b(extern)\\b"
         },
         {
-          "name": "storage.modifier.mutable.rust",
+          "name": "storage.modifier.mutable.snowball",
           "match": "\\b(mut)\\b"
         },
         {
-          "name": "storage.modifier.box.rust",
+          "name": "storage.modifier.box.snowball",
           "match": "\\b(box)\\b"
         },
         {
-          "name": "storage.modifier.const.rust",
+          "name": "storage.modifier.const.snowball",
           "match": "\\b(const)\\b"
         },
         {
-          "name": "storage.modifier.visibility.rust", // FIXME: rename?
+          "name": "storage.modifier.visibility.snowball", // FIXME: rename?
           "match": "\\b(pub)\\b"
         },
         {
-          "name": "storage.modifier.static.rust",
+          "name": "storage.modifier.static.snowball",
           "match": "\\b(static)\\b"
         },
         {
-          "name": "storage.type.module.rust",
+          "name": "storage.type.module.snowball",
           "match": "\\b(mod)\\b"
         },
         {
-          "name": "storage.type.function.rust",
+          "name": "storage.type.function.snowball",
           "match": "\\b(fn)\\b"
         },
         {
-          "name": "storage.type.rust",
+          "name": "storage.type.snowball",
           "match": "\\b(let)\\b"
         },
         {
-          "name": "storage.type.rust",
+          "name": "storage.type.snowball",
           "match": "(impl)(?=<)",
         },
         {
-          "name": "storage.type.rust",
+          "name": "storage.type.snowball",
           "match": "\\b(enum|impl|struct|trait|union)\\b"
         },
         {
-          "name": "entity.name.lifetime.rust",
+          "name": "entity.name.lifetime.snowball",
           "match": "(?<=&)('[a-zA-Z_]+)(?!')",
         },
         // {
-        //   "name": "storage.modifier.lifetime.rust",
+        //   "name": "storage.modifier.lifetime.snowball",
         //   "match": "'([a-zA-Z_][a-zA-Z0-9_]*)\\b(!')",
-        //   "captures": {"1": {"name": "entity.name.lifetime.rust"}}
+        //   "captures": {"1": {"name": "entity.name.lifetime.snowball"}}
         // },
 
         // {
         //   "match": "(&)(')([a-zA-Z_]+)(?!')",
         //   "captures": {
-        //     "1": {"name": "keyword.operator.sigil.rust"},
-        //     "2": {"name": "storage.modifier.lifetime.rust"},
-        //     "3": {"name": "entity.name.lifetime.rust"}
+        //     "1": {"name": "keyword.operator.sigil.snowball"},
+        //     "2": {"name": "storage.modifier.lifetime.snowball"},
+        //     "3": {"name": "entity.name.lifetime.snowball"}
         //   }
         // },
       ]

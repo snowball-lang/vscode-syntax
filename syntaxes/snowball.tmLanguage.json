@@ -3,7 +3,7 @@
         "comment": {
             "patterns": [
                 {
-                    "name": "comment.block.documentation.rust",
+                    "name": "comment.block.documentation.snowball",
                     "begin": "/\\*[\\*!](?![\\*/])",
                     "end": "\\*/",
                     "patterns": [
@@ -45,9 +45,6 @@
                             "captures": {
                                 "1": {
                                     "name": "punctuation.definition.heading.markdown"
-                                },
-                                "2": {
-                                    "name": "entity.name.section.markdown"
                                 },
                                 "3": {
                                     "name": "punctuation.definition.heading.markdown"
@@ -105,12 +102,12 @@
                     ]
                 },
                 {
-                    "name": "comment.block.rust",
+                    "name": "comment.block.snowball",
                     "begin": "/\\*",
                     "end": "\\*/"
                 },
                 {
-                    "name": "comment.line.documentation.rust",
+                    "name": "comment.line.documentation.snowball",
                     "begin": "//[!/](?=[^/])",
                     "end": "$",
                     "patterns": [
@@ -212,7 +209,7 @@
                     ]
                 },
                 {
-                    "name": "comment.line.double-slash.rust",
+                    "name": "comment.line.double-slash.snowball",
                     "begin": "//",
                     "end": "$"
                 }
@@ -222,31 +219,31 @@
             "patterns": [
                 {
                     "match": "(?<=fn )([a-zA-Z][a-zA-Z0-9_]+)",
-                    "name": "entity.name.function.rust"
+                    "name": "entity.name.function.snowball"
                 },
                 {
                     "match": "(?!Err|Ok|Some)([a-zA-Z][a-zA-Z0-9_]+)(?=[(])",
-                    "name": "entity.name.function.rust"
+                    "name": "entity.name.function.snowball"
                 },
                 {
                     "match": "(?!Err|Ok|Some)([a-zA-Z]+)(?=[(])",
-                    "name": "entity.name.function.rust"
+                    "name": "entity.name.function.snowball"
                 },
                 {
                     "match": "([a-zA-Z][a-zA-Z0-9_]+)(\\<)(T)(\\>)(?=[(])",
-                    "name": "entity.name.function.rust",
+                    "name": "entity.name.function.snowball",
                     "captures": {
                         "1": {
-                            "name": "entity.name.function.rust"
+                            "name": "entity.name.function.snowball"
                         },
                         "2": {
-                            "name": "punctuation.definition.type.rust"
+                            "name": "punctuation.definition.type.snowball"
                         },
                         "3": {
-                            "name": "entity.name.type.generic.rust"
+                            "name": "entity.name.type.generic.snowball"
                         },
                         "4": {
-                            "name": "punctuation.definition.type.rust"
+                            "name": "punctuation.definition.type.snowball"
                         }
                     }
                 },
@@ -254,16 +251,16 @@
                     "match": "(impl) ([a-zA-Z_][a-zA-Z0-9:_<>]+) (for) ([a-zA-Z_][a-zA-Z0-9_]+) \\{",
                     "captures": {
                         "1": {
-                            "name": "storage.type.rust"
+                            "name": "storage.type.snowball"
                         },
                         "2": {
-                            "name": "entity.name.type.implementation.rust"
+                            "name": "entity.name.type.implementation.snowball"
                         },
                         "3": {
-                            "name": "storage.modifier.rust"
+                            "name": "storage.modifier.snowball"
                         },
                         "4": {
-                            "name": "entity.name.type.rust"
+                            "name": "entity.name.type.snowball"
                         }
                     }
                 },
@@ -271,10 +268,10 @@
                     "match": "(impl) ([a-zA-Z_][a-zA-Z0-9:]+)(?!for) \\{",
                     "captures": {
                         "1": {
-                            "name": "storage.type.rust"
+                            "name": "storage.type.snowball"
                         },
                         "2": {
-                            "name": "entity.name.type.rust"
+                            "name": "entity.name.type.snowball"
                         }
                     }
                 },
@@ -282,48 +279,29 @@
                     "match": "(?<=\\=) (?!loop)([a-zA-Z][_a-zA-Z0-9:]+)\\s(?=\\{)",
                     "captures": {
                         "1": {
-                            "name": "entity.name.type.rust"
+                            "name": "entity.name.type.snowball"
                         }
                     }
-                },
-                {
-                    "match": "(^\\s+|(Ok)\\()(?!loop)([a-zA-Z][_a-zA-Z0-9:]+)\\s(?=\\{)",
-                    "captures": {
-                        "2": {
-                            "name": "support.constant.core.rust"
-                        },
-                        "3": {
-                            "name": "entity.name.type.rust"
-                        }
-                    }
-                },
-                {
-                    "match": "(Err|Ok|Some)(?=[(])",
-                    "name": "support.constant.core.rust"
-                },
-                {
-                    "name": "storage.type.rust",
-                    "match": "impl(?=<)"
                 },
                 {
                     "match": "(mod)\\s([a-zA-Z_]+)",
                     "captures": {
                         "1": {
-                            "name": "storage.type.module.rust"
+                            "name": "storage.type.module.snowball"
                         },
                         "2": {
-                            "name": "entity.name.type.module.rust"
+                            "name": "entity.name.type.module.snowball"
                         }
                     }
                 },
                 {
-                    "match": "\\b(enum|struct|trait|union)\\s+([a-zA-Z_][a-zA-Z0-9_]+)",
+                    "match": "\\b(enum|struct|class)\\s+([a-zA-Z_][a-zA-Z0-9_]+)",
                     "captures": {
                         "1": {
-                            "name": "storage.type.rust"
+                            "name": "storage.type.snowball"
                         },
                         "2": {
-                            "name": "entity.name.type.rust"
+                            "name": "entity.name.type.snowball"
                         }
                     }
                 },
@@ -332,10 +310,10 @@
                     "end": ";",
                     "beginCaptures": {
                         "1": {
-                            "name": "storage.type.rust"
+                            "name": "storage.type.snowball"
                         },
                         "2": {
-                            "name": "entity.name.type.rust"
+                            "name": "entity.name.type.snowball"
                         }
                     }
                 }
@@ -344,79 +322,79 @@
         "operator": {
             "patterns": [
                 {
-                    "name": "keyword.operator.member-access.rust",
+                    "name": "keyword.operator.member-access.snowball",
                     "match": "(\\.)(?=parse)"
                 },
                 {
-                    "name": "keyword.operator.member-access.rust",
+                    "name": "keyword.operator.member-access.snowball",
                     "match": "\\s(\\.)\\b"
                 },
                 {
-                    "name": "keyword.operator.member-access.rust",
+                    "name": "keyword.operator.member-access.snowball",
                     "match": "\\b(\\.)\\b"
                 },
                 {
-                    "name": "keyword.operator.member-access.rust",
+                    "name": "keyword.operator.member-access.snowball",
                     "match": "\\B(\\.)\\b"
                 },
                 {
-                    "name": "keyword.operator.member-access.rust",
+                    "name": "keyword.operator.member-access.snowball",
                     "match": "(\\.)(?=to_string)"
                 },
                 {
-                    "name": "keyword.operator.range.rust",
+                    "name": "keyword.operator.range.snowball",
                     "match": "(\\.\\.)"
                 },
                 {
-                    "name": "keyword.operator.path.rust",
+                    "name": "keyword.operator.path.snowball",
                     "match": "(\\:\\:)"
                 },
                 {
-                    "name": "keyword.operator.return-type.rust",
+                    "name": "keyword.operator.return-type.snowball",
                     "match": "(->)"
                 },
                 {
-                    "name": "keyword.operator.match.rust",
+                    "name": "keyword.operator.match.snowball",
                     "match": "(=>)"
                 },
                 {
-                    "name": "variable.language.ignored.rust",
+                    "name": "variable.language.ignored.snowball",
                     "match": "\\b(_)\\b"
                 },
                 {
-                    "name": "keyword.operator.error-propagation.rust",
+                    "name": "keyword.operator.error-propagation.snowball",
                     "match": "(?<=\\))(\\?)"
                 },
                 {
-                    "name": "keyword.operator.glob.rust",
+                    "name": "keyword.operator.glob.snowball",
                     "match": "(?<=::)(\\*)(?=;)"
                 },
                 {
-                    "name": "keyword.operator.sigil.rust",
+                    "name": "keyword.operator.sigil.snowball",
                     "match": "[&*](?=[a-zA-Z0-9_\\(\\[\\|\\\"']+)"
                 },
                 {
-                    "name": "keyword.operator.assignment.rust",
+                    "name": "keyword.operator.assignment.snowball",
                     "match": "(\\=)"
                 },
                 {
-                    "name": "keyword.operator.assignment.rust",
+                    "name": "keyword.operator.assignment.snowball",
                     "match": "\\b(\\+=|-=|/=|\\*=|%=|\\^=|&=|\\|=|<<=|>>=|=)\\b"
                 },
                 {
-                    "name": "keyword.operator.arithmetic.rust",
+                    "name": "keyword.operator.arithmetic.snowball",
                     "match": "(!|\\+|-|/|\\*|%|\\^|\\||<<|>>)"
                 },
                 {
-                    "name": "keyword.operator.comparison.rust",
+                    "name": "keyword.operator.comparison.snowball",
                     "match": "(&&|\\|\\||==|!=)"
                 },
                 {
-                    "name": "keyword.operator.comparison.rust",
+                    "name": "keyword.operator.comparison.snowball",
                     "match": "\\s(<|>)"
                 },
                 {
-                    "name": "keyword.operator.comparison.rust",
+                    "name": "keyword.operator.comparison.snowball",
                     "match": "\\B(<=|>=)\\B"
                 }
             ]
@@ -424,51 +402,51 @@
         "storage": {
             "patterns": [
                 {
-                    "name": "storage.modifier.external.rust",
+                    "name": "storage.modifier.external.snowball",
                     "match": "\\b(extern)\\b"
                 },
                 {
-                    "name": "storage.modifier.mutable.rust",
+                    "name": "storage.modifier.mutable.snowball",
                     "match": "\\b(mut)\\b"
                 },
                 {
-                    "name": "storage.modifier.box.rust",
+                    "name": "storage.modifier.box.snowball",
                     "match": "\\b(box)\\b"
                 },
                 {
-                    "name": "storage.modifier.const.rust",
+                    "name": "storage.modifier.const.snowball",
                     "match": "\\b(const)\\b"
                 },
                 {
-                    "name": "storage.modifier.visibility.rust",
+                    "name": "storage.modifier.visibility.snowball",
                     "match": "\\b(pub)\\b"
                 },
                 {
-                    "name": "storage.modifier.static.rust",
+                    "name": "storage.modifier.static.snowball",
                     "match": "\\b(static)\\b"
                 },
                 {
-                    "name": "storage.type.module.rust",
+                    "name": "storage.type.module.snowball",
                     "match": "\\b(mod)\\b"
                 },
                 {
-                    "name": "storage.type.function.rust",
+                    "name": "storage.type.function.snowball",
                     "match": "\\b(fn)\\b"
                 },
                 {
-                    "name": "storage.type.rust",
+                    "name": "storage.type.snowball",
                     "match": "\\b(let)\\b"
                 },
                 {
-                    "name": "storage.type.rust",
+                    "name": "storage.type.snowball",
                     "match": "(impl)(?=<)"
                 },
                 {
-                    "name": "storage.type.rust",
+                    "name": "storage.type.snowball",
                     "match": "\\b(enum|impl|struct|trait|union)\\b"
                 },
                 {
-                    "name": "entity.name.lifetime.rust",
+                    "name": "entity.name.lifetime.snowball",
                     "match": "(?<=&)('[a-zA-Z_]+)(?!')"
                 }
             ]
@@ -476,27 +454,27 @@
         "support": {
             "patterns": [
                 {
-                    "name": "support.function.builtin.rust",
+                    "name": "support.function.builtin.snowball",
                     "match": "\\b(macro_rules|compile_error|format_args|env|option_env|concat_idents|concat|line|column|file|stringify|include|include_str|include_bytes|module_path|cfg)!"
                 },
                 {
-                    "name": "support.function.core.rust",
+                    "name": "support.function.core.snowball",
                     "match": "\\b(panic|assert|assert_eq|assert_ne|debug_assert|debug_assert_eq|debug_assert_ne|try|write|writeln|unreachable|unimplemented)!"
                 },
                 {
-                    "name": "support.function.std.rust",
+                    "name": "support.function.std.snowball",
                     "match": "\\b(format|print|println|eprint|eprintln|select|vec)!"
                 },
                 {
-                    "name": "support.function.log.rust",
+                    "name": "support.function.log.snowball",
                     "match": "\\b(log|error|warn|info|debug|trace|log_enabled)!"
                 },
                 {
-                    "name": "support.constant.core.rust",
+                    "name": "support.constant.core.snowball",
                     "match": "\\b(None|Ok|Err)\\b"
                 },
                 {
-                    "name": "support.constant.core.rust",
+                    "name": "support.constant.core.snowball",
                     "match": "\\b(Some)"
                 }
             ]
@@ -505,41 +483,41 @@
             "patterns": [
                 {
                     "comment": "Floating point literal (fraction)",
-                    "name": "constant.numeric.float.rust",
+                    "name": "constant.numeric.float.snowball",
                     "match": "\\b[0-9][0-9_]*\\.[0-9][0-9_]*([eE][+-]?[0-9_]+)?(f32|f64)?\\b"
                 },
                 {
                     "comment": "Floating point literal (exponent)",
-                    "name": "constant.numeric.float.rust",
+                    "name": "constant.numeric.float.snowball",
                     "match": "\\b[0-9][0-9_]*(\\.[0-9][0-9_]*)?[eE][+-]?[0-9_]+(f32|f64)?\\b"
                 },
                 {
                     "comment": "Floating point literal (typed)",
-                    "name": "constant.numeric.float.rust",
+                    "name": "constant.numeric.float.snowball",
                     "match": "\\b[0-9][0-9_]*(\\.[0-9][0-9_]*)?([eE][+-]?[0-9_]+)?(f32|f64)\\b"
                 },
                 {
                     "comment": "Integer literal (decimal)",
-                    "name": "constant.numeric.integer.decimal.rust",
+                    "name": "constant.numeric.integer.decimal.snowball",
                     "match": "\\b[0-9][0-9_]*([ui](8|16|32|64|128|s|size))?\\b"
                 },
                 {
                     "comment": "Integer literal (hexadecimal)",
-                    "name": "constant.numeric.integer.hexadecimal.rust",
+                    "name": "constant.numeric.integer.hexadecimal.snowball",
                     "match": "\\b0x[a-fA-F0-9_]+([ui](8|16|32|64|128|s|size))?\\b"
                 },
                 {
                     "comment": "Integer literal (octal)",
-                    "name": "constant.numeric.integer.octal.rust",
+                    "name": "constant.numeric.integer.octal.snowball",
                     "match": "\\b0o[0-7_]+([ui](8|16|32|64|128|s|size))?\\b"
                 },
                 {
                     "comment": "Integer literal (binary)",
-                    "name": "constant.numeric.integer.binary.rust",
+                    "name": "constant.numeric.integer.binary.snowball",
                     "match": "\\b0b[01_]+([ui](8|16|32|64|128|s|size))?\\b"
                 },
                 {
-                    "name": "constant.language.boolean.rust",
+                    "name": "constant.language.boolean.snowball",
                     "match": "\\b(true|false)\\b"
                 }
             ]
@@ -547,32 +525,32 @@
         "keyword": {
             "patterns": [
                 {
-                    "name": "variable.language.self.rust",
+                    "name": "variable.language.self.snowball",
                     "match": "\\b(self)\\b"
                 },
                 {
-                    "name": "keyword.other.unsafe.rust",
+                    "name": "keyword.other.unsafe.snowball",
                     "match": "\\b(unsafe)\\b"
                 },
                 {
-                    "name": "keyword.control.rust",
+                    "name": "keyword.control.snowball",
                     "match": "\\b(break|continue|else|if|in|for|loop|match|return|while)\\b"
                 },
                 {
-                    "name": "keyword.other.rust",
+                    "name": "keyword.other.snowball",
                     "match": "\\b(ref|use|super|move)\\b"
                 },
                 {
-                    "name": "keyword.other.where.rust",
+                    "name": "keyword.other.where.snowball",
                     "match": "\\b(where)\\b"
                 },
                 {
-                    "name": "keyword.other.as.rust",
+                    "name": "keyword.other.as.snowball",
                     "match": "(\\b(as)\\b)"
                 },
                 {
                     "comment": "Reserved keyword",
-                    "name": "invalid.deprecated.rust",
+                    "name": "invalid.deprecated.snowball",
                     "match": "\\b(abstract|alignof|become|do|final|macro|offsetof|override|priv|proc|pure|sizeof|typeof|virtual|yield)\\b"
                 }
             ]
@@ -580,19 +558,19 @@
         "meta": {
             "patterns": [
                 {
-                    "name": "meta.attribute.rust",
+                    "name": "meta.attribute.snowball",
                     "begin": "#\\!?\\[",
                     "end": "\\]"
                 },
                 {
-                    "name": "meta.statement.if-let.rust",
+                    "name": "meta.statement.if-let.snowball",
                     "match": "(if) (let)",
                     "captures": {
                         "1": {
-                            "name": "keyword.control.rust"
+                            "name": "keyword.control.snowball"
                         },
                         "2": {
-                            "name": "storage.type.rust"
+                            "name": "storage.type.snowball"
                         }
                     }
                 }
@@ -601,19 +579,19 @@
         "punctuation": {
             "patterns": [
                 {
-                    "name": "punctuation.separator.type.rust",
+                    "name": "punctuation.separator.type.snowball",
                     "match": ":\\s+?(?=(&|bool|char|usize|isize|u8|u16|u32|u64|u128|i8|i16|i32|i64|i128|f32|f64|str|Self|Option|Result|String|Box|Vec|Path|PathBuf|HashMap))"
                 },
                 {
-                    "name": "punctuation.terminator.rust",
+                    "name": "punctuation.terminator.snowball",
                     "match": ";"
                 },
                 {
-                    "name": "punctuation.other.comma.rust",
+                    "name": "punctuation.other.comma.snowball",
                     "match": ","
                 },
                 {
-                    "name": "punctuation.other.paren.rust",
+                    "name": "punctuation.other.paren.snowball",
                     "match": "[)(]"
                 }
             ]
@@ -621,30 +599,30 @@
         "string": {
             "patterns": [
                 {
-                    "name": "constant.character.escape.rust",
+                    "name": "constant.character.escape.snowball",
                     "match": "\\\\(x[0-9A-Fa-f]{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)"
                 },
                 {
-                    "name": "constant.character.rust",
+                    "name": "constant.character.snowball",
                     "match": "b?'([^'\\\\]|\\\\(x[0-9A-Fa-f]{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.))'"
                 },
                 {
-                    "name": "string.quoted.double.rust",
+                    "name": "string.quoted.double.snowball",
                     "begin": "b?\"",
                     "end": "\"",
                     "patterns": [
                         {
-                            "name": "constant.character.escape.rust",
+                            "name": "constant.character.escape.snowball",
                             "match": "\\\\(x[0-9A-Fa-f]{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)"
                         },
                         {
-                            "name": "constant.other.placeholder.rust",
+                            "name": "constant.other.placeholder.snowball",
                             "match": "(\\{)([a-zA-Z0-9_?:$.*<>]+)?(\\})"
                         }
                     ]
                 },
                 {
-                    "name": "string.quoted.double.raw.rust",
+                    "name": "string.quoted.double.raw.snowball",
                     "begin": "b?r(#*)\"",
                     "end": "\"\\1"
                 }
@@ -656,25 +634,25 @@
                     "begin": "(\\:\\:{)",
                     "beginCaptures": {
                         "1": {
-                            "name": "keyword.operator.path.rust"
+                            "name": "keyword.operator.path.snowball"
                         }
                     },
                     "end": "}(;)",
                     "endCaptures": {
                         "1": {
-                            "name": "keyword.operator.path.rust"
+                            "name": "keyword.operator.path.snowball"
                         },
                         "2": {
-                            "name": "punctuation.terminator.rust"
+                            "name": "punctuation.terminator.snowball"
                         }
                     },
                     "patterns": [
                         {
-                            "name": "punctuation.other.comma.rust",
+                            "name": "punctuation.other.comma.snowball",
                             "match": ","
                         },
                         {
-                            "name": "entity.name.type.rust",
+                            "name": "entity.name.type.snowball",
                             "match": "\\w+"
                         }
                     ]
@@ -683,26 +661,26 @@
                     "match": "^(extern) (crate) ([_A-Za-z0-9]+)",
                     "captures": {
                         "1": {
-                            "name": "storage.modifier.external.rust"
+                            "name": "storage.modifier.external.snowball"
                         },
                         "2": {
-                            "name": "keyword.other.rust"
+                            "name": "keyword.other.snowball"
                         },
                         "3": {
-                            "name": "entity.name.type.rust"
+                            "name": "entity.name.type.snowball"
                         }
                     }
                 },
                 {
                     "match": "\\b([A-Za-z][_A-Za-z0-9]+)\\b(?=<[_a-zA-Z']+>)",
-                    "name": "entity.name.type.rust"
+                    "name": "entity.name.type.snowball"
                 },
                 {
                     "match": "([A-Za-z][_A-Za-z0-9]+)(?=::)",
-                    "name": "entity.name.type.mod.rust",
+                    "name": "entity.name.type.mod.snowball",
                     "captures": {
                         "2": {
-                            "name": "keyword.operator.path.rust"
+                            "name": "keyword.operator.path.snowball"
                         }
                     }
                 },
@@ -710,89 +688,69 @@
                     "match": "((?<=::))([a-zA-Z_]+)",
                     "captures": {
                         "1": {
-                            "name": "keyword.operator.path.rust"
+                            "name": "keyword.operator.path.snowball"
                         },
                         "2": {
-                            "name": "entity.name.type.rust"
+                            "name": "entity.name.type.snowball"
                         }
                     }
                 },
                 {
-                    "name": "storage.type.core.rust",
-                    "match": "\\b(bool|char|usize|isize|u8|u16|u32|u64|u128|i8|i16|i32|i64|i128|f32|f64|str|Self|Option|Result)\\b"
+                    "name": "storage.type.core.snowball",
+                    "match": "\\b(Bool|String|Number|Array)\\b"
                 },
                 {
-                    "name": "entity.name.type.hashmap.rust",
+                    "name": "entity.name.type.hashmap.snowball",
                     "match": "HashMap"
                 },
                 {
                     "match": "(?<=->\\s)(\\w+)",
                     "captures": {
                         "1": {
-                            "name": "entity.name.type.rust"
+                            "name": "entity.name.type.snowball"
                         }
                     }
                 },
                 {
-                    "match": "\\b(T|U)\\b",
-                    "captures": {
-                        "1": {
-                            "name": "entity.name.type.generic.rust"
-                        }
-                    }
-                },
-                {
-                    "name": "support.type.marker.rust",
-                    "match": "\\b(Copy|Send|Sized|Sync)\\b"
-                },
-                {
-                    "name": "support.type.core.rust",
-                    "match": "\\b(Drop|Fn|FnMut|FnOnce|Clone|PartialEq|PartialOrd|Eq|Ord|AsRef|AsMut|Into|From|Default|Iterator|Extend|IntoIterator|DoubleEndedIterator|ExactSizeIterator)\\b"
-                },
-                {
-                    "name": "storage.class.std.rust",
-                    "match": "\\b(Box|String|Vec|Path|PathBuf)\\b"
-                },
-                {
-                    "name": "support.type.std.rust",
+                    "name": "support.type.std.snowball",
                     "match": "\\b(ToOwned|ToString|FromStr)\\b"
                 },
                 {
-                    "name": "entity.name.type.param.rust",
+                    "name": "entity.name.type.param.snowball",
                     "begin": "<(?![=<])",
                     "end": "(?<![-])>",
                     "beginCaptures": {
                         "0": {
-                            "name": "punctuation.definition.type.rust"
+                            "name": "punctuation.definition.type.snowball"
                         }
                     },
                     "endCaptures": {
                         "0": {
-                            "name": "punctuation.definition.type.rust"
+                            "name": "punctuation.definition.type.snowball"
                         }
                     },
                     "patterns": [
                         {
-                            "name": "entity.name.type.param.rust",
+                            "name": "entity.name.type.param.snowball",
                             "begin": "<(?![=<])",
                             "end": "(?<![-])>",
                             "beginCaptures": {
                                 "0": {
-                                    "name": "punctuation.definition.type.rust"
+                                    "name": "punctuation.definition.type.snowball"
                                 }
                             },
                             "endCaptures": {
                                 "0": {
-                                    "name": "punctuation.definition.type.rust"
+                                    "name": "punctuation.definition.type.snowball"
                                 }
                             }
                         },
                         {
-                            "name": "storage.modifier.lifetime.rust",
+                            "name": "storage.modifier.lifetime.snowball",
                             "match": "'([a-zA-Z_][a-zA-Z0-9_]*)\\b",
                             "captures": {
                                 "1": {
-                                    "name": "entity.name.lifetime.rust"
+                                    "name": "entity.name.lifetime.snowball"
                                 }
                             }
                         },
@@ -800,23 +758,23 @@
                             "match": "&(')([a-zA-Z_][a-zA-Z0-9_]*)\\b",
                             "captures": {
                                 "1": {
-                                    "name": "storage.modifier.lifetime.rust"
+                                    "name": "storage.modifier.lifetime.snowball"
                                 },
                                 "2": {
-                                    "name": "entity.name.lifetime.rust"
+                                    "name": "entity.name.lifetime.snowball"
                                 }
                             }
                         },
                         {
-                            "name": "storage.type.rust",
+                            "name": "storage.type.snowball",
                             "match": "impl"
                         },
                         {
-                            "name": "punctuation.other.comma.rust",
+                            "name": "punctuation.other.comma.snowball",
                             "match": ","
                         },
                         {
-                            "name": "variable.language.ignored.rust",
+                            "name": "variable.language.ignored.snowball",
                             "match": "\\b(_)\\b"
                         }
                     ]
@@ -826,42 +784,28 @@
         "variable": {
             "patterns": [
                 {
-                    "match": "(let) (mut) ([a-zA-Z_][a-zA-Z0-9_]+)",
+                    "match": "(var) ([a-zA-Z_][a-zA-Z0-9_]+)",
                     "captures": {
                         "1": {
-                            "name": "storage.type.rust"
+                            "name": "storage.type.snowball"
                         },
                         "2": {
-                            "name": "storage.modifier.mutable.rust"
+                            "name": "storage.modifier.mutable.snowball"
                         },
                         "3": {
-                            "name": "variable.other.mutable.rust"
+                            "name": "variable.other.mutable.snowball"
                         }
                     }
                 },
                 {
-                    "name": "variable.other.rust",
+                    "name": "variable.other.snowball",
                     "match": "(?<!\\:\\s)([a-zA-Z_][a-zA-Z0-9_]*)\\s(?==)"
                 },
                 {
                     "match": "([a-zA-Z_][a-zA-Z0-9_]+)(?=[:] )",
                     "captures": {
                         "1": {
-                            "name": "variable.other.rust"
-                        }
-                    }
-                },
-                {
-                    "match": "(let) (mut) ([a-zA-Z_]+)",
-                    "captures": {
-                        "1": {
-                            "name": "storage.type.rust"
-                        },
-                        "2": {
-                            "name": "storage.modifier.mutable.rust"
-                        },
-                        "3": {
-                            "name": "variable.other.mutable.rust"
+                            "name": "variable.other.snowball"
                         }
                     }
                 },
@@ -869,7 +813,7 @@
                     "match": "(?<!\\:\\s)([a-zA-Z_]\\s)(?==)",
                     "captures": {
                         "1": {
-                            "name": "variable.other.rust"
+                            "name": "variable.other.snowball"
                         }
                     }
                 },
@@ -877,7 +821,7 @@
                     "match": "([a-zA-Z_]+)(?=[:] )",
                     "captures": {
                         "1": {
-                            "name": "variable.other.rust"
+                            "name": "variable.other.snowball"
                         }
                     }
                 },
@@ -885,16 +829,16 @@
                     "match": "(let|pub)\\s([a-zA-Z0-9_]+)(\\:\\s)([a-zA-Z0-9_]+)",
                     "captures": {
                         "1": {
-                            "name": "storage.type.rust"
+                            "name": "storage.type.snowball"
                         },
                         "2": {
-                            "name": "variable.other.rust"
+                            "name": "variable.other.snowball"
                         },
                         "3": {
-                            "name": "punctuation.separator.type.rust"
+                            "name": "punctuation.separator.type.snowball"
                         },
                         "4": {
-                            "name": "entity.name.type.rust"
+                            "name": "entity.name.type.snowball"
                         }
                     }
                 },
@@ -902,10 +846,10 @@
                     "match": "^\\s+(return\\s)?(?!self)([a-zA-Z0-9_]+)\\s+$",
                     "captures": {
                         "1": {
-                            "name": "keyword.control.rust"
+                            "name": "keyword.control.snowball"
                         },
                         "2": {
-                            "name": "variable.other.return-value.rust"
+                            "name": "variable.other.return-value.snowball"
                         }
                     }
                 },
@@ -913,13 +857,13 @@
                     "match": "([|])(\\w+)([|])",
                     "captures": {
                         "1": {
-                            "name": "keyword.operator.rust"
+                            "name": "keyword.operator.snowball"
                         },
                         "2": {
-                            "name": "variable.other.map.rust"
+                            "name": "variable.other.map.snowball"
                         },
                         "3": {
-                            "name": "keyword.operator.rust"
+                            "name": "keyword.operator.snowball"
                         }
                     }
                 },
@@ -927,7 +871,7 @@
                     "match": "(?<=&|\\*)(?!mut|self)([a-zA-Z_]+)",
                     "captures": {
                         "1": {
-                            "name": "variable.other.ref.rust"
+                            "name": "variable.other.ref.snowball"
                         }
                     }
                 }
@@ -935,8 +879,8 @@
         }
     },
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "rust",
-    "scopeName": "source.rust",
+    "name": "snowball",
+    "scopeName": "source.snowball",
     "patterns": [
         {
             "include": "#comment"

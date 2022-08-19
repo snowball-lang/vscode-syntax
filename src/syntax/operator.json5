@@ -3,86 +3,86 @@
     "operator": {
       "patterns": [
         {
-          "name": "keyword.operator.member-access.rust",
+          "name": "keyword.operator.member-access.snowball",
           "match": "(\\.)(?=parse)",
         },
         {
-          "name": "keyword.operator.member-access.rust",
+          "name": "keyword.operator.member-access.snowball",
           "match": "\\s(\\.)\\b",
         },
         {
-          "name": "keyword.operator.member-access.rust",
+          "name": "keyword.operator.member-access.snowball",
           "match": "\\b(\\.)\\b",
         },
         {
-          "name": "keyword.operator.member-access.rust",
+          "name": "keyword.operator.member-access.snowball",
           "match": "\\B(\\.)\\b",
         },
         {
-          "name": "keyword.operator.member-access.rust",
+          "name": "keyword.operator.member-access.snowball",
           "match": "(\\.)(?=to_string)",
         },
         {
-          "name": "keyword.operator.range.rust",
+          "name": "keyword.operator.range.snowball",
           "match": "(\\.\\.)",
         },
         // =============================================
         {
-          "name": "keyword.operator.path.rust",
+          "name": "keyword.operator.path.snowball",
           "match": "(\\:\\:)",
         },
         {
-          "name": "keyword.operator.return-type.rust",
+          "name": "keyword.operator.return-type.snowball",
           "match": "(->)",
         },
         {
-          "name": "keyword.operator.match.rust",
+          "name": "keyword.operator.match.snowball",
           "match": "(=>)",
         },
         {
-          "name": "variable.language.ignored.rust",
+          "name": "variable.language.ignored.snowball",
           "match": "\\b(_)\\b",
         },
         // =============================================
         {
-          "name": "keyword.operator.error-propagation.rust",
+          "name": "keyword.operator.error-propagation.snowball",
           "match": "(?<=\\))(\\?)",
         },
         {
-          "name": "keyword.operator.glob.rust",
+          "name": "keyword.operator.glob.snowball",
           "match": "(?<=::)(\\*)(?=;)",
         },
         // =============================================
         {
-          "name": "keyword.operator.sigil.rust",
+          "name": "keyword.operator.sigil.snowball",
           "match": "[&*](?=[a-zA-Z0-9_\\(\\[\\|\\\"']+)",
         },
         {
-          "name": "keyword.operator.assignment.rust",
+          "name": "keyword.operator.assignment.snowball",
           "match": "(\\=)",
         },
         {
-          "name": "keyword.operator.assignment.rust",
+          "name": "keyword.operator.assignment.snowball",
           "match": "\\b(\\+=|-=|/=|\\*=|%=|\\^=|&=|\\|=|<<=|>>=|=)\\b",
         },
         {
-          "name": "keyword.operator.arithmetic.rust",
+          "name": "keyword.operator.arithmetic.snowball",
           "match": "(!|\\+|-|/|\\*|%|\\^|\\||<<|>>)",
         },
         {
-          "name": "keyword.operator.comparison.rust",
+          "name": "keyword.operator.comparison.snowball",
           "match": "(&&|\\|\\||==|!=)",
         },
         // {
-        //   "name": "keyword.operator.comparison.rust",  // Second group because of regex precedence
+        //   "name": "keyword.operator.comparison.snowball",  // Second group because of regex precedence
         //   "match": "\\B(<=|>=|<|>)\\B",
         // },
         {
-          "name": "keyword.operator.comparison.rust",  // Second group because of regex precedence
+          "name": "keyword.operator.comparison.snowball",  // Second group because of regex precedence
           "match": "\\s(<|>)",
         },
         {
-          "name": "keyword.operator.comparison.rust",  // Second group because of regex precedence
+          "name": "keyword.operator.comparison.snowball",  // Second group because of regex precedence
           "match": "\\B(<=|>=)\\B",
         },
       ]
