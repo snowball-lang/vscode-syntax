@@ -22,14 +22,6 @@
           ],
         },
         {
-          "match": "^(extern) (crate) ([_A-Za-z0-9]+)",
-          "captures": {
-            "1": {"name": "storage.modifier.external.snowball"},
-            "2": {"name": "keyword.other.snowball"},
-            "3": {"name": "entity.name.type.snowball"},
-          },
-        },
-        {
           "match": "\\b([A-Za-z][_A-Za-z0-9]+)\\b(?=<[_a-zA-Z']+>)",
           "name": "entity.name.type.snowball",
         },

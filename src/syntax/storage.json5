@@ -4,15 +4,11 @@
       "patterns": [
         {
           "name": "storage.modifier.external.snowball",
-          "match": "\\b(extern)\\b"
+          "match": "\\b(external)\\b"
         },
         {
           "name": "storage.modifier.mutable.snowball",
           "match": "\\b(mut)\\b"
-        },
-        {
-          "name": "storage.modifier.box.snowball",
-          "match": "\\b(box)\\b"
         },
         {
           "name": "storage.modifier.const.snowball",
@@ -20,7 +16,7 @@
         },
         {
           "name": "storage.modifier.visibility.snowball", // FIXME: rename?
-          "match": "\\b(pub)\\b"
+          "match": "\\b(public|private)\\b"
         },
         {
           "name": "storage.modifier.static.snowball",
@@ -28,11 +24,11 @@
         },
         {
           "name": "storage.type.module.snowball",
-          "match": "\\b(mod)\\b"
+          "match": "\\b(namespace)\\b"
         },
         {
           "name": "storage.type.function.snowball",
-          "match": "\\b(fn)\\b"
+          "match": "\\b(func|operator)\\b"
         },
         {
           "name": "storage.type.snowball",
@@ -40,11 +36,7 @@
         },
         {
           "name": "storage.type.snowball",
-          "match": "(impl)(?=<)",
-        },
-        {
-          "name": "storage.type.snowball",
-          "match": "\\b(enum|impl|struct|trait|union)\\b"
+          "match": "\\b(enum|struct|class|interface)\\b"
         },
         {
           "name": "entity.name.lifetime.snowball",

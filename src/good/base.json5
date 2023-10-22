@@ -1,5 +1,5 @@
 {
-  "$schema":   "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "$schema":   "https://raw.githubusercontent.com/snowball-lang/vscode-syntax/master/syntaxes/snowball.tmLanguage.json",
 	"name":      "snowball",
 	"scopeName": "source.snowball",
 	"patterns": [
@@ -9,7 +9,6 @@
     { "include": "#meta" },
     { "include": "#punctuation" },
     { "include": "#string" },
-    { "include": "#support" },
     { "include": "#type" },
     { "include": "#unsorted" },
     { "include": "#variable" },

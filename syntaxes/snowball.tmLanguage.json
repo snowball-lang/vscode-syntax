@@ -218,11 +218,7 @@
         "entity": {
             "patterns": [
                 {
-                    "match": "(?<=fn )([a-zA-Z][a-zA-Z0-9_]+)",
-                    "name": "entity.name.function.snowball"
-                },
-                {
-                    "match": "(?!Err|Ok|Some)([a-zA-Z][a-zA-Z0-9_]+)(?=[(])",
+                    "match": "(?<=func )([a-zA-Z][a-zA-Z0-9_]+)",
                     "name": "entity.name.function.snowball"
                 },
                 {
@@ -244,43 +240,7 @@
                     }
                 },
                 {
-                    "match": "(impl) ([a-zA-Z_][a-zA-Z0-9:_<>]+) (for) ([a-zA-Z_][a-zA-Z0-9_]+) \\{",
-                    "captures": {
-                        "1": {
-                            "name": "storage.type.snowball"
-                        },
-                        "2": {
-                            "name": "entity.name.type.implementation.snowball"
-                        },
-                        "3": {
-                            "name": "storage.modifier.snowball"
-                        },
-                        "4": {
-                            "name": "entity.name.type.snowball"
-                        }
-                    }
-                },
-                {
-                    "match": "(impl) ([a-zA-Z_][a-zA-Z0-9:]+)(?!for) \\{",
-                    "captures": {
-                        "1": {
-                            "name": "storage.type.snowball"
-                        },
-                        "2": {
-                            "name": "entity.name.type.snowball"
-                        }
-                    }
-                },
-                {
-                    "match": "(?<=\\=) (?!loop)([a-zA-Z][_a-zA-Z0-9:]+)\\s(?=\\{)",
-                    "captures": {
-                        "1": {
-                            "name": "entity.name.type.snowball"
-                        }
-                    }
-                },
-                {
-                    "match": "(mod)\\s([a-zA-Z_]+)",
+                    "match": "(namespace)\\s([a-zA-Z_]+)",
                     "captures": {
                         "1": {
                             "name": "storage.type.module.snowball"
@@ -346,10 +306,6 @@
                     "match": "(\\:\\:)"
                 },
                 {
-                    "name": "keyword.operator.return-type.snowball",
-                    "match": "(->)"
-                },
-                {
                     "name": "keyword.operator.match.snowball",
                     "match": "(=>)"
                 },
@@ -399,15 +355,11 @@
             "patterns": [
                 {
                     "name": "storage.modifier.external.snowball",
-                    "match": "\\b(extern)\\b"
+                    "match": "\\b(external)\\b"
                 },
                 {
                     "name": "storage.modifier.mutable.snowball",
                     "match": "\\b(mut)\\b"
-                },
-                {
-                    "name": "storage.modifier.box.snowball",
-                    "match": "\\b(box)\\b"
                 },
                 {
                     "name": "storage.modifier.const.snowball",
@@ -415,7 +367,7 @@
                 },
                 {
                     "name": "storage.modifier.visibility.snowball",
-                    "match": "\\b(pub)\\b"
+                    "match": "\\b(public|private)\\b"
                 },
                 {
                     "name": "storage.modifier.static.snowball",
@@ -423,11 +375,11 @@
                 },
                 {
                     "name": "storage.type.module.snowball",
-                    "match": "\\b(mod)\\b"
+                    "match": "\\b(namespace)\\b"
                 },
                 {
                     "name": "storage.type.function.snowball",
-                    "match": "\\b(fn)\\b"
+                    "match": "\\b(func|operator)\\b"
                 },
                 {
                     "name": "storage.type.snowball",
@@ -435,7 +387,7 @@
                 },
                 {
                     "name": "storage.type.snowball",
-                    "match": "\\b(enum|struct|class)\\b"
+                    "match": "\\b(enum|struct|class|interface)\\b"
                 },
                 {
                     "name": "entity.name.lifetime.snowball",
@@ -499,7 +451,7 @@
                 },
                 {
                     "name": "keyword.control.snowball",
-                    "match": "\\b(break|continue|else|if|in|for|loop|match|return|while)\\b"
+                    "match": "\\b(break|continue|else|if|in|for|switch|return|while)\\b"
                 },
                 {
                     "name": "keyword.other.snowball",
@@ -618,20 +570,6 @@
                     ]
                 },
                 {
-                    "match": "^(extern) (crate) ([_A-Za-z0-9]+)",
-                    "captures": {
-                        "1": {
-                            "name": "storage.modifier.external.snowball"
-                        },
-                        "2": {
-                            "name": "keyword.other.snowball"
-                        },
-                        "3": {
-                            "name": "entity.name.type.snowball"
-                        }
-                    }
-                },
-                {
                     "match": "\\b([A-Za-z][_A-Za-z0-9]+)\\b(?=<[_a-zA-Z']+>)",
                     "name": "entity.name.type.snowball"
                 },
@@ -670,10 +608,6 @@
                             "name": "entity.name.type.snowball"
                         }
                     }
-                },
-                {
-                    "name": "support.type.std.snowball",
-                    "match": "\\b(ToOwned|ToString|FromStr)\\b"
                 },
                 {
                     "name": "entity.name.type.param.snowball",
@@ -786,7 +720,7 @@
                     }
                 },
                 {
-                    "match": "(let|pub)\\s([a-zA-Z0-9_]+)(\\:\\s)([a-zA-Z0-9_]+)",
+                    "match": "(let|public)\\s([a-zA-Z0-9_]+)(\\:\\s)([a-zA-Z0-9_]+)",
                     "captures": {
                         "1": {
                             "name": "storage.type.snowball"
@@ -838,7 +772,7 @@
             ]
         }
     },
-    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "$schema": "https://raw.githubusercontent.com/snowball-lang/vscode-syntax/master/syntaxes/snowball.tmLanguage.json",
     "name": "snowball",
     "scopeName": "source.snowball",
     "patterns": [
@@ -859,9 +793,6 @@
         },
         {
             "include": "#string"
-        },
-        {
-            "include": "#support"
         },
         {
             "include": "#type"
