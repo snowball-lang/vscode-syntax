@@ -10,13 +10,9 @@
           "name": "keyword.control.snowball",
           "match": "\\b(break|continue|else|if|in|for|switch|return|while)\\b"
         },
-        // {
-        //   "name": "keyword.other.snowball",
-        //   "match": "\\b(crate|extern|ref|use|super|move)\\b"
-        // },
         {
           "name": "keyword.other.snowball",
-          "match": "\\b(import)\\b"
+          "match": "\\b(external|unsafe|super)\\b"
         },
         {
           "name": "keyword.other.where.snowball",
@@ -28,8 +24,8 @@
         },
         {
           "comment": "Reserved keyword",
-          "name": "invalid.deprecated.snowball",
-          "match": "\\b(priv|fn|pub|assert)\\b"
+          "name": "invalid.other.snowball",
+          "match": "\\b(import|private|func|public|operator|class|interface|macro|implements|extends|throw|new)\\b"
         },
       ]
     }

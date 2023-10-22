@@ -374,6 +374,18 @@
                     "match": "\\b(static)\\b"
                 },
                 {
+                    "name": "storage.modifier.unsafe.snowball", 
+                    "match": "\\b(unsafe)\\b"
+                },
+                {
+                    "name": "storage.modifier.virtual.snowball",
+                    "match": "\\b(virtual)\\b"
+                },
+                {
+                    "name": "storage.modifier.const.snowball",
+                    "match": "\\b(\\bconst\\b)\\b"
+                },
+                {
                     "name": "storage.type.module.snowball",
                     "match": "\\b(namespace)\\b"
                 },
@@ -383,15 +395,19 @@
                 },
                 {
                     "name": "storage.type.snowball",
-                    "match": "\\b(var)\\b"
+                    "match": "\\b(let)\\b"
                 },
                 {
                     "name": "storage.type.snowball",
-                    "match": "\\b(enum|struct|class|interface)\\b"
+                    "match": "\\b(enum|struct|class|interface|macro)\\b"
                 },
                 {
                     "name": "entity.name.lifetime.snowball",
                     "match": "(?<=&)('[a-zA-Z_]+)(?!')"
+                }, 
+                {
+                    "name": "storage.modifier.snowball",
+                    "match": "\\b(import|implements|extends|throw|new)\\b"
                 }
             ]
         },
@@ -492,7 +508,7 @@
             "patterns": [
                 {
                     "name": "punctuation.separator.type.snowball",
-                    "match": ":\\s+?(?=(&|bool|char|usize|isize|u8|u16|u32|u64|u128|i8|i16|i32|i64|i128|f32|f64|str|Self|Option|Result|String|Box|Vec|Path|PathBuf|HashMap))"
+                    "match": ":\\s+?(?=(&|bool|char|usize|isize|u8|u16|u32|u64|u128|i8|i16|i32|i64|i128|f32|f64|Self|String|Vector))"
                 },
                 {
                     "name": "punctuation.terminator.snowball",
