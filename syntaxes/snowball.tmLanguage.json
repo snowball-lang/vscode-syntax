@@ -811,6 +811,9 @@
             "include": "#string"
         },
         {
+            "include": "#support"
+        },
+        {
             "include": "#type"
         },
         {
